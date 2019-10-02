@@ -60,10 +60,24 @@ class ViewController: UIViewController {
             {
                 m_operand += calculatorButton!
             }
-            
             break
             
+        case "+/-":
+            if((ResultLabel.text?.contains("-"))!)
+            {
+                ResultLabel.text = ResultLabel.text?.replacingOccurrences(of: "-", with: "")
+            }
+            else
+            {
+                ResultLabel.text = "-" + ResultLabel.text!
+            }
+            isShowingResult = true
+            break
             
+        case "√":
+            ResultLabel.text = String(sqrt(Double(ResultLabel.text!)!))
+            isShowingResult = true
+            break
             
         case "=":
 
