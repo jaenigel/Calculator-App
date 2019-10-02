@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-mw-tvr">
+                                <rect key="frame" x="25" y="765" width="176" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="0" backgroundImage="Zero-1">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXD-38-lfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujm-G7-LWc">
+                                <rect key="frame" x="308" y="766" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="=" backgroundImage="Equals">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6j-5T-dBv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovh-R5-Xny">
+                                <rect key="frame" x="216" y="754" width="82" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="." backgroundImage="Decimal">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XuQ-BG-oVO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdA-uH-Tzc">
+                                <rect key="frame" x="25" y="665" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1" backgroundImage="One">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmZ-9s-pob"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-95-rF1">
+                                <rect key="frame" x="119" y="665" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2" backgroundImage="Two">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1Z-fz-Orc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auo-lR-EWO">
+                                <rect key="frame" x="214" y="665" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3" backgroundImage="Three">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntC-RI-zIz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-SY-hr0">
+                                <rect key="frame" x="308" y="665" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+" backgroundImage="Plus">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oLs-c2-KmX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj0-sI-H9A">
+                                <rect key="frame" x="25" y="566" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4" backgroundImage="Four">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3o-vn-A8b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enq-fT-1cn">
+                                <rect key="frame" x="119" y="566" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="5" backgroundImage="Five">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIk-QE-oRz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYr-XI-Ch8">
+                                <rect key="frame" x="214" y="566" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="6" backgroundImage="Six">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xw9-Z4-ZyF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvU-an-izq">
+                                <rect key="frame" x="308" y="566" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-" backgroundImage="Minus">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNY-lW-I9N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08z-na-fnl">
+                                <rect key="frame" x="25" y="469" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="7" backgroundImage="Seven">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKN-54-F3E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnx-Vs-VCx">
+                                <rect key="frame" x="119" y="469" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="8" backgroundImage="Eight">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzI-Jb-sjE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQz-5q-4cS">
+                                <rect key="frame" x="214" y="469" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="9" backgroundImage="Nine">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2u-h8-u4C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gN-IY-Oyb">
+                                <rect key="frame" x="25" y="373" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear" backgroundImage="AC">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCe-B4-cUc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRr-aA-5e7">
+                                <rect key="frame" x="119" y="373" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+/-" backgroundImage="PlusMinus">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5uQ-jr-8Ww"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-bW-bqv">
+                                <rect key="frame" x="214" y="373" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="√" backgroundImage="Square root">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOo-0n-IDC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-yu-5LF">
+                                <rect key="frame" x="308" y="373" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="/" backgroundImage="Divide">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ONj-Ed-s97"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-v2-BDj">
+                                <rect key="frame" x="308" y="325" width="82" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back" backgroundImage="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ip1-cn-hah"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n62-UB-Pa8">
+                                <rect key="frame" x="25" y="222" width="365" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-I8-MZz">
+                                <rect key="frame" x="308" y="469" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="x" backgroundImage="Multiply">
+                                    <color key="titleColor" red="0.5096947862694301" green="0.5096947862694301" blue="0.5096947862694301" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalculatorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sbl-Bd-D1Z"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="NxD-Ju-mDQ">
+                                <rect key="frame" x="20" y="44" width="370" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ResultLabel" destination="n62-UB-Pa8" id="CuJ-oY-a3f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AC" width="173" height="173"/>
+        <image name="Back" width="173" height="91"/>
+        <image name="Decimal" width="173" height="191"/>
+        <image name="Divide" width="173" height="173"/>
+        <image name="Eight" width="173" height="173"/>
+        <image name="Equals" width="173" height="173"/>
+        <image name="Five" width="173" height="173"/>
+        <image name="Four" width="173" height="173"/>
+        <image name="Header" width="1116" height="358"/>
+        <image name="Minus" width="173" height="173"/>
+        <image name="Multiply" width="173" height="173"/>
+        <image name="Nine" width="173" height="173"/>
+        <image name="One" width="173" height="173"/>
+        <image name="Plus" width="173" height="173"/>
+        <image name="PlusMinus" width="173" height="173"/>
+        <image name="Seven" width="173" height="173"/>
+        <image name="Six" width="173" height="173"/>
+        <image name="Square root" width="173" height="173"/>
+        <image name="Three" width="173" height="173"/>
+        <image name="Two" width="173" height="173"/>
+        <image name="Zero-1" width="366" height="173"/>
+    </resources>
+</document>
