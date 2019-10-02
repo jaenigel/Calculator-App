@@ -1,6 +1,11 @@
 //
 // Jae Nigel Miranda
-// 301106338
+// Student Number : 301106338
+// Oct 2, 2019
+//
+// App Description: A basic calculator app for iOS assignment
+//
+// Version Information: 1.4
 //
 //  ViewController.swift
 //  Calculator App
@@ -18,7 +23,7 @@ class ViewController: UIViewController {
     private var m_currentValue: Double = 0.0
     private var isWaiting = false
     private var isShowingResult = false
-    private var lastOperation = ""
+    private var lastOperation = "" // Used by the equals button continue the operation with a constant second operand
     //var person:  = (name: "Tom", age:29)
     
     @IBOutlet weak var ResultLabel: UILabel!
@@ -27,8 +32,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         ResultLabel.text="0"
-        
-        //person.saysHello();
+
     }
 
 
@@ -37,14 +41,14 @@ class ViewController: UIViewController {
         
         
         switch(calculatorButton) {
-        case "Clear":
+        case "Clear": //clears all values and label
             m_operand = "0"
             m_currentValue = 0.0
             isWaiting = false
             ResultLabel.text = m_operand
             
             
-        case "Back":
+        case "Back": //deletes the last character of an input
             m_operand = String(m_operand.dropLast(1))
             break
             
@@ -62,7 +66,7 @@ class ViewController: UIViewController {
             }
             break
             
-        case "+/-":
+        case "+/-": // changing the sign of the number displayed
             if((ResultLabel.text?.contains("-"))!)
             {
                 ResultLabel.text = ResultLabel.text?.replacingOccurrences(of: "-", with: "")
@@ -74,84 +78,52 @@ class ViewController: UIViewController {
             isShowingResult = true
             break
             
-        case "√":
+        case "√": // shows the square root
             ResultLabel.text = String(sqrt(Double(ResultLabel.text!)!))
             isShowingResult = true
             break
             
-        case "=":
+        case "=": //Evaluate an operation or continues to evaluate an operation by clicking again
 
             if(lastOperation == "Addition")
             {
             
                 m_currentValue =  add(current: m_currentValue,op:m_operand)
-                if((String(m_currentValue)).hasSuffix(".0"))
-                {
-                    ResultLabel.text = String((String(m_currentValue)).dropLast(2))
-                    
-                }
-                else
-                {
-                    ResultLabel.text = String(m_currentValue)
-                }
-                
-                isShowingResult = true
             }
             else if(lastOperation == "Subtraction")
             {
                 
                 m_currentValue =  subtract(current: m_currentValue,op:m_operand)
-                if((String(m_currentValue)).hasSuffix(".0"))
-                {
-                    ResultLabel.text = String((String(m_currentValue)).dropLast(2))
-                    
-                }
-                else
-                {
-                    ResultLabel.text = String(m_currentValue)
-                }
-                
-                isShowingResult = true
             }
             else if(lastOperation == "Division")
             {
                 
                 m_currentValue =  divide(current: m_currentValue,op:m_operand)
-                if((String(m_currentValue)).hasSuffix(".0"))
-                {
-                    ResultLabel.text = String((String(m_currentValue)).dropLast(2))
-                    
-                }
-                else
-                {
-                    ResultLabel.text = String(m_currentValue)
-                    
-                }
-                
-                isShowingResult = true
             }
             else if(lastOperation == "Multiplication")
             {
                 
                 m_currentValue =  multiply(current: m_currentValue,op:m_operand)
-                if((String(m_currentValue)).hasSuffix(".0"))
-                {
-                    ResultLabel.text = String((String(m_currentValue)).dropLast(2))
-                    
-                }
-                else
-                {
-                    ResultLabel.text = String(m_currentValue)
-                }
-                
-                isShowingResult = true
             }
+            
+            
+            if((String(m_currentValue)).hasSuffix(".0"))
+            {
+                ResultLabel.text = String((String(m_currentValue)).dropLast(2))
+                
+            }
+            else
+            {
+                ResultLabel.text = String(m_currentValue)
+            }
+            
+            isShowingResult = true
             
             break
             
             
             
-        case "+":
+        case "+": //declares add operation
             if(m_currentValue == 0.0)
             {
                 m_currentValue = Double(ResultLabel.text!)!
@@ -184,7 +156,7 @@ class ViewController: UIViewController {
             
             
             
-        case "-":
+        case "-"://declares subtract operation
             if(m_currentValue == 0.0)
             {
                 m_currentValue = Double(ResultLabel.text!)!
@@ -214,7 +186,7 @@ class ViewController: UIViewController {
             }
             break
             
-        case "/":
+        case "/"://declares division operation
             if(m_currentValue == 0.0)
             {
                 m_currentValue = Double(ResultLabel.text!)!
@@ -244,7 +216,7 @@ class ViewController: UIViewController {
             }
             break
             
-        case "x":
+        case "x": //declares multiplication operation
             if(m_currentValue == 0.0)
             {
                 m_currentValue = Double(ResultLabel.text!)!
@@ -261,12 +233,12 @@ class ViewController: UIViewController {
                 m_currentValue =  multiply(current: m_currentValue,op:m_operand)
                 if((String(m_currentValue)).hasSuffix(".0"))
                 {
-                    ResultLabel.text = String((String(m_currentValue)).dropLast(2))
+                    ResultLabel.text = String((String(m_currentValue)).dropLast(2)) //removes .0
                     
                 }
                 else
                 {
-                    ResultLabel.text = String(m_currentValue)
+                    ResultLabel.text = String(m_currentValue) //shows results
                 }
                 
                 isShowingResult = true
@@ -305,16 +277,16 @@ class ViewController: UIViewController {
         
         if(isShowingResult)
         {
-            isWaiting = true
+            isWaiting = true //in the middle of an operation
             
         }
         else
         {
-            ResultLabel.text = m_operand
+            ResultLabel.text = m_operand // appends a number tapped
         }
     }
     
-    func add (current:Double, op:String) -> Double
+    func add (current:Double, op:String) -> Double // adds the args passed
     {
         var num1: Double = 0.0
         var num2: Double = 0.0
@@ -324,7 +296,7 @@ class ViewController: UIViewController {
         return (num1 + num2)
     }
     
-    func subtract (current:Double, op:String) -> Double
+    func subtract (current:Double, op:String) -> Double // subtracts the args passed
     {
         var num1: Double = 0.0
         var num2: Double = 0.0
@@ -334,7 +306,7 @@ class ViewController: UIViewController {
         return (num1 - num2)
     }
     
-    func divide (current:Double, op:String) -> Double
+    func divide (current:Double, op:String) -> Double // divide the args passed
     {
         var num1: Double = 0.0
         var num2: Double = 0.0
@@ -343,7 +315,7 @@ class ViewController: UIViewController {
         num2 = Double(op)!
         return (num1 / num2)
     }
-    func multiply (current:Double, op:String) -> Double
+    func multiply (current:Double, op:String) -> Double // multiplies the args passed
     {
         var num1: Double = 0.0
         var num2: Double = 0.0
